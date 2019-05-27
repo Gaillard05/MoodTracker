@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <android.support.constraint.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:text="Commentaire"
+        android:id="@+id/activity_mood_dialog_title_comment_txt"/>
+
+    <EditText
+        android:layout_height="45dp"
+        android:layout_width="314dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.618"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="44dp"
+        android:id="@+id/activity_mood_dialog_message_comment_txt"
+        android:inputType=""
+        android:importantForAutofill="no" tools:targetApi="o"
+        android:labelFor="@android:id/inputExtractEditText"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Annuler"
+        android:layout_marginTop="96dp"
+        android:id="@+id/activity_mood_dialog_cancel_btn"
+        android:textColor="@color/colorPrimary"
+        android:background="@android:color/background_light"
+        android:layout_marginLeft="140dp"
+        android:layout_marginStart="140dp"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Valider"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="96dp"
+        android:id="@+id/activity_mood_dialog_validate_btn"
+        android:textColor="@color/colorPrimary"
+        android:background="@android:color/background_light"
+        android:layout_marginLeft="240dp"
+        android:layout_marginStart="240dp"/>
+
+</android.support.constraint.ConstraintLayout>

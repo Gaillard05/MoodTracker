@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#C4C1C1"
+    tools:context="com.maylis.moodtracker.HistoryMoodActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_7_days"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/activity_history_mood_week_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/light_sage" />
+
+
+        <Button
+            android:id="@+id/activity_history_mood_week_dialog_btn"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="316dp"
+            android:layout_marginLeft="316dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/comment_dialog"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_6_days"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/activity_history_mood_6days_txt"
+            android:layout_width="213dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/light_sage" />
+
+        <Button
+            android:id="@+id/activity_history_mood_6days_dialog_btn"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="152dp"
+            android:layout_marginLeft="152dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/comment_dialog"
+            />
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_5_days"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/activity_history_mood_5days_txt"
+            android:layout_width="259dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/light_sage" />
+
+        <Button
+            android:id="@+id/activity_history_mood_5days_dialog_btn"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="185dp"
+            android:layout_marginLeft="185dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/comment_dialog"
+             />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_4_days"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/activity_history_mood_4days_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/light_sage" />
+
+        <Button
+            android:id="@+id/activity_history_mood_4days_dialog_btn"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="316dp"
+            android:layout_marginLeft="316dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/comment_dialog"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_3_days"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/activity_history_mood_3days_txt"
+            android:layout_width="213dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/light_sage" />
+
+        <Button
+            android:id="@+id/activity_history_mood_3days_dialog_btn"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="152dp"
+            android:layout_marginLeft="152dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/comment_dialog" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_2_days"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/activity_history_mood_before_yesterday_txt"
+            android:layout_width="144dp"
+            android:layout_height="match_parent"
+            android:background="@color/light_sage" />
+
+        <Button
+            android:id="@+id/activity_history_mood_before_yesterday_dialog_btn"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginLeft="68dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/comment_dialog"
+
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout-1-days"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/activity_history_mood_yesterday_txt"
+            android:layout_width="259dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/light_sage" />
+
+        <Button
+            android:id="@+id/activity_history_mood_yesterday_dialog_btn"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="185dp"
+            android:layout_marginLeft="185dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/comment_dialog"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
