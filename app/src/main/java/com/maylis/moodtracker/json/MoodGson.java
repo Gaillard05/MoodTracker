@@ -4,12 +4,14 @@ import com.google.gson.Gson;
 
 
 
+
+
 /**
  * Created by Maylis Gaillard on 29/05/2019.
  */
 public class MoodGson {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Gson gson = new Gson();
         String json = gson.toJson("@drawable/smiley_happy");
