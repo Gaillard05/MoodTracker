@@ -90,12 +90,9 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                 moodDialogActivity.getValidateButton().setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Mood mood = new Mood();
-                        mood.moodIndex = currentMoodIndex;
-                        mood.comment = moodDialogActivity.getCurrentTextComment();
-
-
-
+                        //Mood mood = new Mood();
+                        //mood.moodIndex = currentMoodIndex;
+                       //mood.comment = moodDialogActivity.getCurrentTextComment();
                         moodDialogActivity.dismiss();
                     }
                 });

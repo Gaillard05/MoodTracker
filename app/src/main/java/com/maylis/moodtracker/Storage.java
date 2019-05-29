@@ -36,14 +36,5 @@ public class Storage {
 
 
     }
-    //public static void BackgroundColor(Context context, String color){
-        //SharedPreferences mPreferences = context.getSharedPreferences(color, MODE_PRIVATE);
-        //Gson gson = new Gson();
-        //String json = mPreferences.getString(color, "");
-        //color = gson.fromJson(json, Mood.class);
-        //return color;
-
-
 
  }
-//}
