@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
+//import com.google.gson.Gson;
 
 
 
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
 
 
 
-    private final Gson gson = new Gson();
+    //private final Gson gson = new Gson();
 
     private int currentMoodIndex;
     private int currentColorIndex;
