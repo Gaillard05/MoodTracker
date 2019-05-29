@@ -52,14 +52,6 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
 
             };
 
-    private static void serializedMood(){
-
-    }
-
-    private static void serializedComment(){
-
-    }
-
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
