@@ -6,6 +6,10 @@ public class Mood {
     private int moodIndex;
     private String comment;
 
+    public Mood() {
+        moodIndexJson = gson.toJson(getMoodIndex());
+    }
+
     public int getMoodIndex() {
         return moodIndex;
     }
@@ -24,7 +28,7 @@ public class Mood {
 
     Gson gson = new Gson();
 
-    String moodIndexJson = gson.toJson(getMoodIndex());
+    String moodIndexJson;
 }
 
 
