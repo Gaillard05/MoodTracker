@@ -55,9 +55,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
 
     }
-
-
-
 }
 
 
