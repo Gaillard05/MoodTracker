@@ -1,19 +1,17 @@
 package com.maylis.moodtracker;
 
-//import com.google.gson.Gson;
+import com.google.gson.Gson;
 
 public class Mood {
     private int moodIndex;
     private String comment;
 
     public int getMoodIndex() {
-        setMoodIndex(moodIndex);
         return moodIndex;
     }
 
-    public void setMoodIndex(int moodIndex) {
-        getMoodIndex();
-        this.moodIndex = moodIndex;
+    public void setMoodIndex(int index) {
+        this.moodIndex = index;
     }
 
     public String getComment() {
@@ -24,9 +22,9 @@ public class Mood {
         this.comment = comment;
     }
 
-    //Gson gson = new Gson();
+    Gson gson = new Gson();
 
-    //String moodIndexJson = gson.toJson(moodIndex);
+    String moodIndexJson = gson.toJson(getMoodIndex());
 }
 
 

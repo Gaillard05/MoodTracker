@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-//import com.google.gson.Gson;
+import com.google.gson.Gson;
 
 
 
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
 
 
 
-    //private final Gson gson = new Gson();
+    private final Gson gson = new Gson();
 
     private int currentMoodIndex;
     private int currentColorIndex;
@@ -89,9 +89,9 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                 moodDialogActivity.getValidateButton().setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        //Mood mood = new Mood();
-                        //mood.moodIndex = currentMoodIndex;
-                       //mood.comment = moodDialogActivity.getCurrentTextComment();
+                        Mood mood = new Mood();
+                        mood.getMoodIndex();
+                        mood.getComment(); moodDialogActivity.getCurrentTextComment();
                         moodDialogActivity.dismiss();
                     }
                 });
