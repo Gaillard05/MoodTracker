@@ -90,8 +90,8 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                     @Override
                     public void onClick(View v) {
                         Mood mood = new Mood();
-                        mood.getMoodIndex();
-                        mood.getComment(); moodDialogActivity.getCurrentTextComment();
+                        mood.setMoodIndex(currentMoodIndex);
+                        mood.setComment(moodDialogActivity.getCurrentTextComment());
                         moodDialogActivity.dismiss();
                     }
                 });
