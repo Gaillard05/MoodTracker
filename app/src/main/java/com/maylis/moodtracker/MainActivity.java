@@ -18,7 +18,6 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 
 
-
 public class MainActivity extends AppCompatActivity implements GestureDetector.OnGestureListener {
     GestureDetector gestureDetector;
 
@@ -31,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
 
 
     private final Gson gson = new Gson();
+
 
     private int currentMoodIndex;
     private int currentColorIndex;
@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                     }
                 });
                 moodDialogActivity.build();
+
 
             }
 
