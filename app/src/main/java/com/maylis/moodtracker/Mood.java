@@ -22,9 +22,6 @@ public class Mood {
         this.comment = comment;
     }
 
-    //Gson gson = new Gson();
-   //String moodIndexJson = gson.toJson(Mood);
-
 }
 
 
