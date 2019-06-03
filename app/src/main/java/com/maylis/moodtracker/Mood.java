@@ -1,6 +1,6 @@
 package com.maylis.moodtracker;
 
-//import com.google.gson.Gson;
+
 
 public class Mood {
     private int moodIndex;
