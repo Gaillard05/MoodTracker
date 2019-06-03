@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                         mood.setMoodIndex(currentMoodIndex);
                         mood.setComment(moodDialogActivity.getCurrentTextComment());
                         Gson gson = new Gson();
-                        String moodJson = gson.toJson(mood);
+                        String moodJson = gson.toJson(currentMoodIndex);
                         moodDialogActivity.dismiss();
 
                     }
