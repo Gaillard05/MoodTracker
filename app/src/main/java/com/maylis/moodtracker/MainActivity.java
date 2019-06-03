@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                         System.out.println(mood);
                         SharedPreferences preferences = getPreferences(MODE_PRIVATE);
                         preferences.edit().putInt("mood", mood.getMoodIndex()).apply();
-                        String Mood = getPreferences(MODE_PRIVATE).getString("mood",null);
+
 
                         moodDialogActivity.dismiss();
 
