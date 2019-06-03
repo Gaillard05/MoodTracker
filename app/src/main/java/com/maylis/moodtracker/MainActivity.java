@@ -5,6 +5,7 @@ package com.maylis.moodtracker;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -98,6 +99,10 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                         gson.toJson(mood);
                         mood = gson.fromJson(moodJson, Mood.class);
                         System.out.println(mood);
+                        SharedPreferences preferences = getPreferences(MODE_PRIVATE);
+                        preferences.edit().putInt("mood", mood.getMoodIndex()).apply();
+                        String Mood = getPreferences(MODE_PRIVATE).getString("mood",null);
+
                         moodDialogActivity.dismiss();
 
 
