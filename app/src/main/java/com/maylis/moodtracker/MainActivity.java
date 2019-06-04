@@ -119,7 +119,6 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                 Intent HistoryMoodActivity = new Intent(MainActivity.this, HistoryMoodActivity.class);
                 startActivity(HistoryMoodActivity);
 
-
             }
         });
 
