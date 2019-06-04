@@ -102,10 +102,6 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                         //preferences.edit().putString("mood", moodJson).apply();
                         Storage.store(v.getContext(), mood, "mood");
                         moodDialogActivity.dismiss();
-
-
-
-
                     }
                 });
                 moodDialogActivity.build();
