@@ -52,8 +52,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
         mButtonDialogBeforeYesterday = (Button) findViewById(R.id.activity_history_mood_before_yesterday_dialog_btn);
         mYesterdays = (TextView) findViewById(R.id.activity_history_mood_yesterday_txt);
         mButtonDialogYesterday = (Button) findViewById(R.id.activity_history_mood_yesterday_dialog_btn);
-
-        Storage.load(getBaseContext(),"mood");
     }
 }
 
