@@ -96,7 +96,6 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                         Gson gson = new Gson();
                         String moodJson = gson.toJson(mood);
                         System.out.println(moodJson);
-                        gson.toJson(mood);
                         mood = gson.fromJson(moodJson, Mood.class);
                         System.out.println(mood);
                         SharedPreferences preferences = getPreferences(MODE_PRIVATE);
