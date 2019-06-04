@@ -53,7 +53,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
         mYesterdays = (TextView) findViewById(R.id.activity_history_mood_yesterday_txt);
         mButtonDialogYesterday = (Button) findViewById(R.id.activity_history_mood_yesterday_dialog_btn);
 
-        Storage.load(getApplicationContext(),"mood");
+        Storage.load(this,"mood");
     }
 }
 
