@@ -5,7 +5,7 @@ package com.maylis.moodtracker;
 
 
 import android.content.Intent;
-import android.content.SharedPreferences;
+//import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -93,14 +93,17 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                         Mood mood = new Mood();
                         mood.setMoodIndex(currentMoodIndex);
                         mood.setComment(moodDialogActivity.getCurrentTextComment());
-                        Gson gson = new Gson();
-                        String moodJson = gson.toJson(mood);
-                        System.out.println(moodJson);
-                        mood = gson.fromJson(moodJson, Mood.class);
-                        System.out.println(mood);
-                        SharedPreferences preferences = getPreferences(MODE_PRIVATE);
-                        preferences.edit().putInt("mood", mood.getMoodIndex()).apply();
+                        //Gson gson = new Gson();
+                       //String moodJson = gson.toJson(mood);
+                       //System.out.println(moodJson);
+                       //mood = gson.fromJson(moodJson, Mood.class);
+                       //System.out.println(mood);
+                        //SharedPreferences preferences = getPreferences(MODE_PRIVATE);
+                        //preferences.edit().putString("mood", moodJson).apply();
+                        Storage.store(v.getContext(), mood, "mood");
                         moodDialogActivity.dismiss();
+
+
 
 
                     }

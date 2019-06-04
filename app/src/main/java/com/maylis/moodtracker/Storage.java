@@ -16,21 +16,22 @@ import static android.content.Context.MODE_PRIVATE;
 public class Storage {
 
 
-    public static void store(Context context, Mood mood, String comment) {
-        SharedPreferences mPreferences = context.getSharedPreferences(comment, MODE_PRIVATE);
+    public static void store(Context context, Mood mood, String moodKey) {
+        SharedPreferences mPreferences = context.getSharedPreferences(moodKey, MODE_PRIVATE);
         SharedPreferences.Editor prefsEditor = mPreferences.edit();
         Gson gson = new Gson();
         String json = gson.toJson(mood);
-        prefsEditor.putString(comment, json);
+        prefsEditor.putString(moodKey, json);
         prefsEditor.apply();
+
 
 
     }
 
-    public static Mood load(Context context, String comment) {
-        SharedPreferences mPreferences = context.getSharedPreferences(comment, MODE_PRIVATE);
+    public static Mood load(Context context, String moodKey) {
+        SharedPreferences mPreferences = context.getSharedPreferences(moodKey, MODE_PRIVATE);
         Gson gson = new Gson();
-        String json = mPreferences.getString(comment, "");
+        String json = mPreferences.getString(moodKey, "");
         Mood mood = gson.fromJson(json, Mood.class);
         return mood;
 
