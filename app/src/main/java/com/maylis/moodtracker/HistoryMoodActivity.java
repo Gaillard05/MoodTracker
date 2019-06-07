@@ -11,8 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.Objects;
-
 
 public class HistoryMoodActivity extends AppCompatActivity {
 
