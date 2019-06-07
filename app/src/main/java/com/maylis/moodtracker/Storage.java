@@ -33,6 +33,7 @@ public class Storage {
         Gson gson = new Gson();
         String json = mPreferences.getString(moodKey, "");
         Mood mood = gson.fromJson(json, Mood.class);
+        Mood r;
         return mood;
 
 
