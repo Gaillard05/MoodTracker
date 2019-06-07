@@ -35,6 +35,7 @@ public class Storage {
         Mood mood = gson.fromJson(json, Mood.class);
         return mood;
 
+
     }
 
  }
