@@ -8,6 +8,7 @@ package com.maylis.moodtracker;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -52,6 +53,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
         mButtonDialogYesterday = (Button) findViewById(R.id.activity_history_mood_yesterday_dialog_btn);
 
         Mood r = Storage.load(this,"mood");
+        Log.d("HistoryMood","Mood value:"+ r.getMoodIndex());
 
     }
 }
