@@ -6,6 +6,7 @@ package com.maylis.moodtracker;
 
 
 
+import android.app.ActivityManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -54,6 +55,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
         Mood r = Storage.load(this,"mood");
         Log.d("HistoryMood","Mood value:"+ r.getMoodIndex());
+        Log.d("HistoryMood","Comment value:"+ r.getComment());
 
     }
 }
