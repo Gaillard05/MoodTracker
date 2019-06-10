@@ -6,7 +6,6 @@ package com.maylis.moodtracker;
 
 
 
-import android.app.ActivityManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
