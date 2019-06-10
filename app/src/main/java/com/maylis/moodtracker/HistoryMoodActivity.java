@@ -56,8 +56,9 @@ public class HistoryMoodActivity extends AppCompatActivity {
         Log.d("HistoryMood","Mood value:"+ r.getMoodIndex());
         Log.d("HistoryMood","Comment value:"+ r.getComment());
 
+        }
+
     }
-}
 
 
 
