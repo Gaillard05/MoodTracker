@@ -6,6 +6,7 @@ package com.maylis.moodtracker;
 
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -69,6 +70,9 @@ public class HistoryMoodActivity extends AppCompatActivity {
         mButtonDialogYesterday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Intent Comment = new Intent(HistoryMoodActivity.this, MoodDialogActivity.class);
+
 
                 Toast.makeText(HistoryMoodActivity.this,"", Toast.LENGTH_SHORT).show();
 
