@@ -62,7 +62,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(HistoryMoodActivity.this,"", Toast.LENGTH_SHORT).show();
+               Toast.makeText(HistoryMoodActivity.this,"", Toast.LENGTH_SHORT).show();
 
             }
         });
