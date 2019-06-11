@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
+
 public class HistoryMoodActivity extends AppCompatActivity {
 
     private TextView mWeek;
@@ -60,6 +61,9 @@ public class HistoryMoodActivity extends AppCompatActivity {
         mButtonDialogYesterday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
 
             }
         });
