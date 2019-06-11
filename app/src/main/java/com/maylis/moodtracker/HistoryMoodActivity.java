@@ -12,7 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
+import android.widget.Toast;
 
 
 public class HistoryMoodActivity extends AppCompatActivity {
@@ -62,6 +62,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Toast.makeText(HistoryMoodActivity.this,"", Toast.LENGTH_SHORT).show();
 
 
 
