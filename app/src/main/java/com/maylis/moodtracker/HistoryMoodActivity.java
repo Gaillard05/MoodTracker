@@ -9,6 +9,7 @@ package com.maylis.moodtracker;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -55,6 +56,13 @@ public class HistoryMoodActivity extends AppCompatActivity {
         Mood r = Storage.load(this,"mood");
         Log.d("HistoryMood","Mood value:"+ r.getMoodIndex());
         Log.d("HistoryMood","Comment value:"+ r.getComment());
+
+        mButtonDialogYesterday.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         }
 
