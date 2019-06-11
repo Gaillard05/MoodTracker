@@ -11,7 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +24,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
     private TextView mThreeDays;
     private TextView mBeforeYesterdays;
     private TextView mYesterdays;
-    private RelativeLayout mColorYesterday;
+
 
     private Button mButtonDialogWeek;
     private Button mButtonDialogSixDays;
@@ -60,10 +59,9 @@ public class HistoryMoodActivity extends AppCompatActivity {
         mButtonDialogBeforeYesterday = (Button) findViewById(R.id.activity_history_mood_before_yesterday_dialog_btn);
 
         mYesterdays = (TextView) findViewById(R.id.activity_history_mood_yesterday_txt);
-        mColorYesterday =(RelativeLayout) findViewById(R.id.layout_1_days);
         mButtonDialogYesterday = (Button) findViewById(R.id.activity_history_mood_yesterday_dialog_btn);
 
-        mColorYesterday.setBackgroundResource(R.color.banana_yellow);
+        mYesterdays.setBackgroundResource(R.color.banana_yellow);
 
         Mood r = Storage.load(this,"mood");
         Log.d("HistoryMood","Mood value:"+ r.getMoodIndex());

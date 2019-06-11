@@ -175,7 +175,8 @@
             android:layout_width="259dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:background="@color/light_sage" />
+            android:background="@color/light_sage"
+            />
 
         <Button
             android:id="@+id/activity_history_mood_yesterday_dialog_btn"
