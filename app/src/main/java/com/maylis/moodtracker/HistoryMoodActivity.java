@@ -35,7 +35,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history_mood);
 
@@ -62,7 +62,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-               Toast.makeText(HistoryMoodActivity.this,"", Toast.LENGTH_SHORT).show();
+                Toast.makeText(HistoryMoodActivity.this,"", Toast.LENGTH_SHORT).show();
 
             }
         });
