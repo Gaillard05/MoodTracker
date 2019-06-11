@@ -64,8 +64,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
                 Toast.makeText(HistoryMoodActivity.this,"", Toast.LENGTH_SHORT).show();
 
-
-
             }
         });
 
