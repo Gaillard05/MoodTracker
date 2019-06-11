@@ -1,7 +1,7 @@
 package com.maylis.moodtracker;
 
 
-import android.widget.Toast;
+
 
 public class Mood {
     private int moodIndex;
