@@ -74,9 +74,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
                 Intent Comment = new Intent(HistoryMoodActivity.this, MoodDialogActivity.class);
 
 
-
                 Toast.makeText(HistoryMoodActivity.this,"", Toast.LENGTH_SHORT).show();
-
             }
         });
 
