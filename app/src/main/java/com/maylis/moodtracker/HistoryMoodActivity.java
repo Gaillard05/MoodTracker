@@ -68,9 +68,9 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
 
 
-        final Mood mMood = Storage.load(this, "mood");
-        Log.d("HistoryMood", "Mood value:" + mMood.getMoodIndex());
-        Log.d("HistoryMood", "Comment value:" + mMood.getComment());
+        final Mood r = Storage.load(this, "mood");
+        Log.d("HistoryMood", "Mood value:" + r.getMoodIndex());
+        Log.d("HistoryMood", "Comment value:" + r.getComment());
 
         mButtonDialogYesterday.setOnClickListener(new View.OnClickListener() {
             @Override
