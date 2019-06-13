@@ -6,7 +6,6 @@ package com.maylis.moodtracker;
 
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -34,7 +33,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
     private Button mButtonDialogThreeDays;
     private Button mButtonDialogBeforeYesterday;
     private Button mButtonDialogYesterday;
-
+    private Mood r;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -63,21 +62,22 @@ public class HistoryMoodActivity extends AppCompatActivity {
         mButtonDialogYesterday = (Button) findViewById(R.id.activity_history_mood_yesterday_dialog_btn);
         mYesterdays.setBackgroundResource(R.color.banana_yellow);
 
-        Mood r = Storage.load(this,"mood");
-        Log.d("HistoryMood","Mood value:"+ r.getMoodIndex());
-        Log.d("HistoryMood","Comment value:"+ r.getComment());
+
+        Mood r = Storage.load(this, "mood");
+        Log.d("HistoryMood", "Mood value:" + r.getMoodIndex());
+        Log.d("HistoryMood", "Comment value:" + r.getComment());
 
         mButtonDialogYesterday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Toast.makeText(HistoryMoodActivity.this,"", Toast.LENGTH_SHORT).show();
+
             }
         });
 
-        }
-
     }
+}
 
 
 
