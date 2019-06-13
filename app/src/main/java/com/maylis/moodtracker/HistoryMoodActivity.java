@@ -33,7 +33,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
     private Button mButtonDialogThreeDays;
     private Button mButtonDialogBeforeYesterday;
     private Button mButtonDialogYesterday;
-    private Mood r;
+    private Mood mMood;
 
 
     @Override
@@ -68,9 +68,9 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
 
 
-        Mood r = Storage.load(this, "mood");
-        Log.d("HistoryMood", "Mood value:" + r.getMoodIndex());
-        Log.d("HistoryMood", "Comment value:" + r.getComment());
+        final Mood mMood = Storage.load(this, "mood");
+        Log.d("HistoryMood", "Mood value:" + mMood.getMoodIndex());
+        Log.d("HistoryMood", "Comment value:" + mMood.getComment());
 
         mButtonDialogYesterday.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +78,8 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
 
                 Toast.makeText(HistoryMoodActivity.this,"", Toast.LENGTH_SHORT).show();
+
+
 
             }
         });
