@@ -34,6 +34,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
     private Button mButtonDialogBeforeYesterday;
     private Button mButtonDialogYesterday;
     private Mood r;
+    //private Mood mMood;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -62,6 +63,8 @@ public class HistoryMoodActivity extends AppCompatActivity {
         mButtonDialogYesterday = (Button) findViewById(R.id.activity_history_mood_yesterday_dialog_btn);
         mYesterdays.setBackgroundResource(R.color.banana_yellow);
 
+        //mMood = (Mood) findViewById(R.id.);
+
 
         Mood r = Storage.load(this, "mood");
         Log.d("HistoryMood", "Mood value:" + r.getMoodIndex());
@@ -71,6 +74,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+               //r.getComment();
                 Toast.makeText(HistoryMoodActivity.this,"", Toast.LENGTH_SHORT).show();
 
             }
