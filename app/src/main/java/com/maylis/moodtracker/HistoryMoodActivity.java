@@ -74,10 +74,10 @@ public class HistoryMoodActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String Commentaire = "";
+                String comment = "";
                 System.out.println( "" + r.getComment());
 
-                Toast.makeText(HistoryMoodActivity.this,Commentaire + r.getComment() , Toast.LENGTH_SHORT).show();
+                Toast.makeText(HistoryMoodActivity.this,comment + r.getComment() , Toast.LENGTH_SHORT).show();
 
 
 
