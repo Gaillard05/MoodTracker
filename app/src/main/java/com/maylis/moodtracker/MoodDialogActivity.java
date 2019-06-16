@@ -25,17 +25,24 @@ class MoodDialogActivity extends Dialog {
         this.dialogCommentView = findViewById(R.id.activity_mood_dialog_message_comment_txt);
     }
 
-    void setComment(){this.comment = "Commentaire";}
+    void setComment(){
+        this.comment = "Commentaire";}
 
     String getCurrentTextComment(){
         return commentView.getText().toString();
     }
 
-    void setDialogComment() {this.dialogComment = "";}
+    void setDialogComment(){
+        this.dialogComment = "";
+    }
 
-    Button getCancelButton(){return cancelButton;}
+    Button getCancelButton(){
+        return cancelButton;
+    }
 
-    Button getValidateButton() { return validateButton;}
+    Button getValidateButton(){
+        return validateButton;
+    }
 
     void build(){
 
