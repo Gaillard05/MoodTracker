@@ -26,7 +26,8 @@ class MoodDialogActivity extends Dialog {
     }
 
     void setComment(){
-        this.comment = "Commentaire";}
+        this.comment = "Commentaire";
+    }
 
     String getCurrentTextComment(){
         return commentView.getText().toString();
