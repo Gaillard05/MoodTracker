@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
+//import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -79,6 +80,9 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                 final MoodDialogActivity moodDialogActivity = new MoodDialogActivity(activity);
                 moodDialogActivity.setComment();
                 moodDialogActivity.setDialogComment();
+
+                //Log.d(MainActivity.this, "Comment value:" + setComment);
+
                 moodDialogActivity.getCancelButton().setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -97,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                     }
                 });
                 moodDialogActivity.build();
-                
+
             }
 
 
