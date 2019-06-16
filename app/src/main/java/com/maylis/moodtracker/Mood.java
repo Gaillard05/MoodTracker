@@ -1,11 +1,10 @@
 package com.maylis.moodtracker;
 
 
-
-
 public class Mood {
     private int moodIndex;
     private String comment;
+
 
     public int getMoodIndex() {
         return moodIndex;
