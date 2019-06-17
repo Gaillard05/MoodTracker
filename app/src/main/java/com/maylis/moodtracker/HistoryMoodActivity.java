@@ -77,7 +77,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
                 String comment = "";
                 System.out.println( "" + r.getComment());
 
-                Toast.makeText(HistoryMoodActivity.this,comment + r.getComment() , Toast.LENGTH_SHORT).show();
+                Toast.makeText(HistoryMoodActivity.this,comment + r.getComment(), Toast.LENGTH_SHORT).show();
 
 
 
