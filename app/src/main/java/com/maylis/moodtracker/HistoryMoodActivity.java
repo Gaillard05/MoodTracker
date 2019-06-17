@@ -111,7 +111,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
                     mButtonDialogBeforeYesterday.setVisibility(View.INVISIBLE);
                 } else {
 
-                    Toast.makeText(HistoryMoodActivity.this, "" , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HistoryMoodActivity.this, "" + r.getComment() , Toast.LENGTH_SHORT).show();
                     isComment = true;
 
                     mButtonDialogBeforeYesterday.setVisibility(View.VISIBLE);
@@ -125,17 +125,16 @@ public class HistoryMoodActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(isComment){
+                    Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
+                    isComment = true;
 
+                    mButtonDialogThreeDays.setVisibility(View.VISIBLE);
+                } else {
                     Toast.makeText(HistoryMoodActivity.this, "" , Toast.LENGTH_SHORT).show();
                     isComment = false;
 
                     mButtonDialogThreeDays.setVisibility(View.INVISIBLE);
-                } else {
 
-                    Toast.makeText(HistoryMoodActivity.this, "" , Toast.LENGTH_SHORT).show();
-                    isComment = true;
-
-                    mButtonDialogThreeDays.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -145,18 +144,15 @@ public class HistoryMoodActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(isComment){
+                    Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
+                    isComment = true;
 
+                    mButtonDialogFourDays.setVisibility(View.VISIBLE);
+                } else {
                     Toast.makeText(HistoryMoodActivity.this, "" , Toast.LENGTH_SHORT).show();
                     isComment = false;
 
                     mButtonDialogFourDays.setVisibility(View.INVISIBLE);
-                } else {
-
-                    Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
-                    isComment = true;
-
-                    mButtonDialogFourDays.setVisibility(View.VISIBLE);
-
                 }
             }
         });
@@ -166,17 +162,15 @@ public class HistoryMoodActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(isComment){
+                    Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
+                    isComment = true;
 
+                    mButtonDialogFiveDays.setVisibility(View.VISIBLE);
+                } else {
                     Toast.makeText(HistoryMoodActivity.this, "" , Toast.LENGTH_SHORT).show();
                     isComment = false;
 
                     mButtonDialogFiveDays.setVisibility(View.INVISIBLE);
-                } else {
-
-                    Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
-                    isComment = true;
-
-                    mButtonDialogFiveDays.setVisibility(View.VISIBLE);
                 }
 
             }
@@ -187,18 +181,15 @@ public class HistoryMoodActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(isComment){
-
-                    Toast.makeText(HistoryMoodActivity.this, "" , Toast.LENGTH_SHORT).show();
-                    isComment = false;
-
-                    mButtonDialogSixDays.setVisibility(View.INVISIBLE);
-                } else {
-
-                    Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
                     isComment = true;
 
                     mButtonDialogSixDays.setVisibility(View.VISIBLE);
+                } else {
+                    Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
+                    isComment = false;
 
+                    mButtonDialogSixDays.setVisibility(View.INVISIBLE);
                 }
 
             }
@@ -208,18 +199,15 @@ public class HistoryMoodActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(isComment){
-
-                    Toast.makeText(HistoryMoodActivity.this, "" , Toast.LENGTH_SHORT).show();
-                    isComment = false;
-
-                    mButtonDialogWeek.setVisibility(View.INVISIBLE);
-                } else {
-
-                    Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
                     isComment = true;
 
                     mButtonDialogWeek.setVisibility(View.VISIBLE);
+                } else {
+                    Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
+                    isComment = false;
 
+                    mButtonDialogWeek.setVisibility(View.INVISIBLE);
                 }
             }
         });
