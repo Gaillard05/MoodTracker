@@ -90,7 +90,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
                 } else {
 
-                    Toast.makeText(HistoryMoodActivity.this,"" + r.getComment(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HistoryMoodActivity.this,"" , Toast.LENGTH_SHORT).show();
                     isComment = false;
 
                     mButtonDialogBeforeYesterday.setVisibility(View.INVISIBLE);
