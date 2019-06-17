@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                 moodDialogActivity.setComment();
                 moodDialogActivity.setDialogComment();
 
-                //Log.d(MainActivity.this, "Comment value:" + setComment());
+                //Log.i(MainActivity.this, "Comment value:" + setComment());
 
                 moodDialogActivity.getCancelButton().setOnClickListener(new View.OnClickListener() {
                     @Override
