@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
-//import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -85,6 +84,8 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                     public void onClick(View v) {
                         Toast.makeText(getApplicationContext(), "pas d'avis", Toast.LENGTH_LONG).show();
                         moodDialogActivity.dismiss();
+
+
                     }
                 });
                 moodDialogActivity.getValidateButton().setOnClickListener(new View.OnClickListener() {
@@ -95,9 +96,6 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                         mood.setComment(moodDialogActivity.getCurrentTextComment());
                         Storage.store(v.getContext(), mood, "mood");
                         moodDialogActivity.dismiss();
-
-                        //Log.i(MainActivity.this, "Comment value:" + mood.setComment());
-
                     }
                 });
                 moodDialogActivity.build();
