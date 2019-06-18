@@ -10,7 +10,7 @@ import java.util.GregorianCalendar;
  */
 public class ManageDateMood {
 
-    private String Date;
+    private String date;
 
     public void convertDateToString() {
 
