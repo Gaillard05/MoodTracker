@@ -27,7 +27,7 @@ public class Storage {
 
 
     }
-
+    
     public static Mood load(Context context, String moodKey) {
         SharedPreferences mPreferences = context.getSharedPreferences(moodKey, MODE_PRIVATE);
         Gson gson = new Gson();
