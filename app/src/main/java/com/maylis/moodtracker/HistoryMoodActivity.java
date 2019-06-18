@@ -38,8 +38,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
    private int colorIndex;
 
-
-
     private int[] colorDrawableResID  = {
             R.color.faded_red,
             R.color.warm_grey,
