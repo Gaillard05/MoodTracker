@@ -36,11 +36,25 @@ public class HistoryMoodActivity extends AppCompatActivity {
     private boolean isComment;
     private Mood r;
 
+   private int colorIndex;
+
+
+
+    private int[] colorDrawableResID  = {
+            R.color.faded_red,
+            R.color.warm_grey,
+            R.color.cornflower_blue_65,
+            R.color.light_sage,
+            R.color.banana_yellow,
+            };
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history_mood);
+
+        colorIndex = 4;
+
 
         isComment = false;
 
@@ -71,7 +85,9 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
         mYesterdays = (TextView) findViewById(R.id.activity_history_mood_yesterday_txt);
         mButtonDialogYesterday = (Button) findViewById(R.id.activity_history_mood_yesterday_dialog_btn);
-        mYesterdays.setBackgroundResource(R.color.banana_yellow);
+        mYesterdays.setBackgroundResource(colorDrawableResID[colorIndex]);
+
+
         isComment = true;
 
         final Mood r = Storage.load(this, "mood");
@@ -83,6 +99,8 @@ public class HistoryMoodActivity extends AppCompatActivity {
         mButtonDialogYesterday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
 
                 if(isComment) {
 
@@ -220,6 +238,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
                 }
             }
         });
+
 
     }
 }
