@@ -2,11 +2,11 @@ package com.maylis.moodtracker;
 
 
 
-
 public class Mood {
     private int moodIndex;
     private String dialogCommentView;
-    private String dateInString;
+    private String Date;
+
 
 
     public int getMoodIndex() {
@@ -24,12 +24,12 @@ public class Mood {
 
     public void setComment(String comment) { this.dialogCommentView = comment; }
 
-    public String getDateInString() {
-        return dateInString;
+    public String getDate() {
+        return Date;
     }
 
-    public void setDateInString(String dateInString) {
-        this.dateInString = dateInString;
+    public void setDate(String date) {
+        Date = date;
     }
 }
 
