@@ -23,10 +23,11 @@ public class ManageDateMood {
         mDate = calendar.getTime();
     }
 
-    public void Convert() {
+    public String Convert() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/M/yyyy");
         String date = sdf.format(new Date());
         System.out.println(date); //18/06/2019
+        return date;
     }
 
     public Date getDate() {

@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                         Mood mood = new Mood();
                         mood.setMoodIndex(currentMoodIndex);
                         mood.setComment(moodDialogActivity.getCurrentTextComment());
+                        //mood.setDate(ManageDateMood.);
                         Storage.store(v.getContext(), mood, "mood");
                         moodDialogActivity.dismiss();
                     }
