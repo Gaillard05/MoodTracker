@@ -16,10 +16,13 @@ import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 
 public class HistoryMoodActivity extends AppCompatActivity {
+
 
     private TextView mWeek;
     private TextView mSixDays;
@@ -40,9 +43,9 @@ public class HistoryMoodActivity extends AppCompatActivity {
     private boolean isComment;
     private Mood r;
 
-   private int colorIndex;
+    private int colorIndex;
 
-    private int[] colorDrawableResID  = {
+    private int[] colorDrawableResID = {
             R.color.faded_red,
             R.color.warm_grey,
             R.color.cornflower_blue_65,
@@ -97,168 +100,192 @@ public class HistoryMoodActivity extends AppCompatActivity {
         Log.d("HistoryMood", "Comment value:" + r.getComment());
         Log.d("HistoryMood", "date:" + r.getDate());
 
+        class RecoveryDate {
+            private void day() {
+                String day = "18-06-2019";
+                System.out.println(day + r.getDate());
+                String strDate = "2019-06-18";
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                Date date = null;
+                try {
+                    date = dateFormat.parse(strDate);
+                } catch (ParseException e) {
+                    e.printStackTrace();
 
-        String day = "18-06-2019";
-        System.out.println( day + r.getDate());
-        String strDate = "2019-06-18";
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        Date date = null;
-        try {
-            date = dateFormat.parse(strDate);
-        } catch (ParseException e) {
-            e.printStackTrace();
+                }
+
+                class CalculationDate {
+                    private long CONST_DURATION_OF_DAY = 1000l * 60 * 60 * 24;
+
+                    public CalculationDate() {
+
+                        Calendar calendar1 = new GregorianCalendar();
+                        calendar1.set(Calendar.YEAR, 2019);
+                        calendar1.set(Calendar.MONTH, 6);
+                        calendar1.set(Calendar.DAY_OF_MONTH, 18);
+                        Date date1 = calendar1.getTime();
+                        //  2019-06-24
+                        Calendar calendar2 = new GregorianCalendar();
+                        calendar2.set(Calendar.YEAR, 2019);
+                        calendar2.set(Calendar.MONTH, 6);
+                        calendar2.set(Calendar.DAY_OF_MONTH, 24);
+                        Date date2 = calendar2.getTime();
+                        // Difference
+                        long diff = Math.abs(date2.getTime() - date1.getTime());
+                        long numberOfDay = (long) diff / CONST_DURATION_OF_DAY;
+                        System.err.println("Le nombre de jour est : " + numberOfDay);
+
+                    }
+
+                    public void historyMoodActivity(String[] args) {
+                        new CalculationDate();
+                    }
+                }
+                mButtonDialogYesterday.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+
+                        if (isComment) {
+
+                            String comment = "";
+                            System.out.println("" + r.getComment());
+
+                            Toast.makeText(HistoryMoodActivity.this, comment + r.getComment(), Toast.LENGTH_SHORT).show();
+                            isComment = true;
+
+                            mButtonDialogYesterday.setVisibility(View.VISIBLE);
+
+
+                        } else {
+
+                            Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
+                            isComment = false;
+
+                            mButtonDialogBeforeYesterday.setVisibility(View.INVISIBLE);
+
+                        }
+                    }
+                });
+
+                mButtonDialogBeforeYesterday.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+
+                        if (isComment) {
+
+                            Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
+                            isComment = false;
+
+                            mButtonDialogBeforeYesterday.setVisibility(View.INVISIBLE);
+                        } else {
+
+                            Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
+                            isComment = true;
+
+                            mButtonDialogBeforeYesterday.setVisibility(View.VISIBLE);
+                        }
+
+                    }
+                });
+
+                mButtonDialogThreeDays.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        if (isComment) {
+                            Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
+                            isComment = true;
+
+                            mButtonDialogThreeDays.setVisibility(View.VISIBLE);
+                        } else {
+                            Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
+                            isComment = false;
+
+                            mButtonDialogThreeDays.setVisibility(View.INVISIBLE);
+
+                        }
+                    }
+                });
+
+                mButtonDialogFourDays.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        if (isComment) {
+                            Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
+                            isComment = true;
+
+                            mButtonDialogFourDays.setVisibility(View.VISIBLE);
+                        } else {
+                            Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
+                            isComment = false;
+
+                            mButtonDialogFourDays.setVisibility(View.INVISIBLE);
+                        }
+                    }
+                });
+
+                mButtonDialogFiveDays.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        if (isComment) {
+                            Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
+                            isComment = true;
+
+                            mButtonDialogFiveDays.setVisibility(View.VISIBLE);
+                        } else {
+                            Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
+                            isComment = false;
+
+                            mButtonDialogFiveDays.setVisibility(View.INVISIBLE);
+                        }
+
+                    }
+                });
+
+                mButtonDialogSixDays.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        if (isComment) {
+                            Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
+                            isComment = true;
+
+                            mButtonDialogSixDays.setVisibility(View.VISIBLE);
+
+                        } else {
+                            Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
+                            isComment = false;
+                            mButtonDialogSixDays.setVisibility(View.INVISIBLE);
+
+                        }
+
+                    }
+                });
+
+                mButtonDialogWeek.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (isComment) {
+                            Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
+                            isComment = true;
+                            mButtonDialogWeek.setVisibility(View.VISIBLE);
+
+                        } else {
+                            Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
+                            isComment = false;
+                            mButtonDialogWeek.setVisibility(View.INVISIBLE);
+
+                        }
+                    }
+                });
+            }
         }
-
-
-
-
-        mButtonDialogYesterday.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-
-                if(isComment) {
-
-                    String comment = "";
-                    System.out.println( "" + r.getComment());
-
-                    Toast.makeText(HistoryMoodActivity.this,comment + r.getComment(), Toast.LENGTH_SHORT).show();
-                    isComment = true;
-
-                    mButtonDialogYesterday.setVisibility(View.VISIBLE);
-
-
-                } else {
-
-                    Toast.makeText(HistoryMoodActivity.this,"" , Toast.LENGTH_SHORT).show();
-                    isComment = false;
-
-                    mButtonDialogBeforeYesterday.setVisibility(View.INVISIBLE);
-
-                }
-            }
-        });
-
-        mButtonDialogBeforeYesterday.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                if(isComment){
-
-                    Toast.makeText(HistoryMoodActivity.this, "" , Toast.LENGTH_SHORT).show();
-                    isComment = false;
-
-                    mButtonDialogBeforeYesterday.setVisibility(View.INVISIBLE);
-                } else {
-
-                    Toast.makeText(HistoryMoodActivity.this, "" + r.getComment() , Toast.LENGTH_SHORT).show();
-                    isComment = true;
-
-                    mButtonDialogBeforeYesterday.setVisibility(View.VISIBLE);
-                }
-
-            }
-        });
-
-        mButtonDialogThreeDays.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if(isComment){
-                    Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
-                    isComment = true;
-
-                    mButtonDialogThreeDays.setVisibility(View.VISIBLE);
-                } else {
-                    Toast.makeText(HistoryMoodActivity.this, "" , Toast.LENGTH_SHORT).show();
-                    isComment = false;
-
-                    mButtonDialogThreeDays.setVisibility(View.INVISIBLE);
-
-                }
-            }
-        });
-
-        mButtonDialogFourDays.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if(isComment){
-                    Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
-                    isComment = true;
-
-                    mButtonDialogFourDays.setVisibility(View.VISIBLE);
-                } else {
-                    Toast.makeText(HistoryMoodActivity.this, "" , Toast.LENGTH_SHORT).show();
-                    isComment = false;
-
-                    mButtonDialogFourDays.setVisibility(View.INVISIBLE);
-                }
-            }
-        });
-
-        mButtonDialogFiveDays.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if(isComment){
-                    Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
-                    isComment = true;
-
-                    mButtonDialogFiveDays.setVisibility(View.VISIBLE);
-                } else {
-                    Toast.makeText(HistoryMoodActivity.this, "" , Toast.LENGTH_SHORT).show();
-                    isComment = false;
-
-                    mButtonDialogFiveDays.setVisibility(View.INVISIBLE);
-                }
-
-            }
-        });
-
-        mButtonDialogSixDays.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if(isComment){
-                    Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
-                    isComment = true;
-
-                    mButtonDialogSixDays.setVisibility(View.VISIBLE);
-
-                } else {
-                    Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
-                    isComment = false;
-                    mButtonDialogSixDays.setVisibility(View.INVISIBLE);
-
-                }
-
-            }
-        });
-
-        mButtonDialogWeek.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(isComment){
-                    Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
-                    isComment = true;
-                    mButtonDialogWeek.setVisibility(View.VISIBLE);
-
-                } else {
-                    Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
-                    isComment = false;
-                    mButtonDialogWeek.setVisibility(View.INVISIBLE);
-
-                }
-            }
-        });
-
-
     }
 }
-
 
 
 
