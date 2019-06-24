@@ -26,7 +26,7 @@ public class ManageDateMood {
     public static String Convert() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/M/yyyy");
         String date = sdf.format(new Date());
-        System.out.println(date); //18/06/2019
+        System.out.println(date); //24/06/2019
         return date;
     }
 
