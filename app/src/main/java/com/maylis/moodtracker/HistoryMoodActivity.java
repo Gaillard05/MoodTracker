@@ -14,6 +14,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 public class HistoryMoodActivity extends AppCompatActivity {
 
@@ -92,6 +96,19 @@ public class HistoryMoodActivity extends AppCompatActivity {
         Log.d("HistoryMood", "Mood value:" + r.getMoodIndex());
         Log.d("HistoryMood", "Comment value:" + r.getComment());
         Log.d("HistoryMood", "date" + r.getDate());
+
+
+        String day = "18-06-2019";
+        System.out.println( day + r.getDate());
+        String strDate = "2019-06-18";
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = null;
+        try {
+            date = dateFormat.parse(strDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
 
 
 
