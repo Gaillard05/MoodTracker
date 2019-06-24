@@ -17,7 +17,7 @@ public class ManageDateMood {
 
     public ManageDateMood() {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.DAY_OF_MONTH, 18);
+        calendar.set(Calendar.DAY_OF_MONTH, 24);
         calendar.set(Calendar.MONTH, 6);
         calendar.set(Calendar.YEAR, 2019);
         mDate = calendar.getTime();

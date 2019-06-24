@@ -91,6 +91,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
         final Mood r = Storage.load(this, "mood");
         Log.d("HistoryMood", "Mood value:" + r.getMoodIndex());
         Log.d("HistoryMood", "Comment value:" + r.getComment());
+        Log.d("HistoryMood","date"+ r.getDate());
 
 
 
