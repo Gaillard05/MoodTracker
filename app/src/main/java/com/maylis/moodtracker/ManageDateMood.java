@@ -23,7 +23,7 @@ public class ManageDateMood {
         mDate = calendar.getTime();
     }
 
-    public String Convert() {
+    public static String Convert() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/M/yyyy");
         String date = sdf.format(new Date());
         System.out.println(date); //18/06/2019
@@ -33,9 +33,4 @@ public class ManageDateMood {
     public Date getDate() {
         return mDate;
     }
-    @Override
-    public String toString(){
-        SimpleDateFormat sdf = (SimpleDateFormat) SimpleDateFormat.getDateInstance();
-        return sdf.format(mDate);
  }
-}
