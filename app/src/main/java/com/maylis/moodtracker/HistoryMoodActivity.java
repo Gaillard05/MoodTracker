@@ -137,7 +137,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
                     }
 
-                    public void historyMoodActivity(String[] args) {
+                    public void HistoryMoodActivity(String[] args) {
                         new CalculationDate();
                     }
                 }
