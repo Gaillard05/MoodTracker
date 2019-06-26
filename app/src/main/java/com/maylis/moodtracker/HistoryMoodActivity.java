@@ -58,7 +58,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
     private String recoveryDate() {
         String day = "24-06-2019";
         System.out.println(day + r.getDate());
-        String strDate = "2019-06-2019";
+        String strDate = "2019-06-24";
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = null;
         try {
