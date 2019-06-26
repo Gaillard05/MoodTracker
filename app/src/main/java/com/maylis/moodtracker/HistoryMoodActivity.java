@@ -98,6 +98,14 @@ public class HistoryMoodActivity extends AppCompatActivity {
         return 6;
     }
 
+    private void calendarDay(){
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.DAY_OF_MONTH, 24);
+        calendar.set(Calendar.MONTH, 6);
+        calendar.set(Calendar.YEAR, 2019);
+        calendar.getTime();
+    }
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -149,26 +157,10 @@ public class HistoryMoodActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-
-                        if (isComment) {
-
                             String comment = "";
                             System.out.println("" + r.getComment());
 
                             Toast.makeText(HistoryMoodActivity.this, comment + r.getComment(), Toast.LENGTH_SHORT).show();
-                            isComment = true;
-
-                            mButtonDialogYesterday.setVisibility(View.VISIBLE);
-
-
-                        } else {
-
-                            Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
-                            isComment = false;
-
-                            mButtonDialogBeforeYesterday.setVisibility(View.INVISIBLE);
-
-                        }
                     }
                 });
 
