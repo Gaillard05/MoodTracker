@@ -53,6 +53,51 @@ public class HistoryMoodActivity extends AppCompatActivity {
             R.color.banana_yellow,
             };
 
+    private String recoveryDate;
+
+    private String recoveryDate() {
+        String day = "18-06-2019";
+        System.out.println(day + r.getDate());
+        String strDate = "2019-06-18";
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = null;
+        try {
+            date = dateFormat.parse(strDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+
+        }
+
+        return day;
+    }
+
+    private int calculationDate;
+    private long CONST_DURATION_OF_DAY;
+
+    private int calculationDate() {
+
+        long CONST_DURATION_OF_DAY = 1000 * 60 * 60 * 24;
+
+        Calendar calendar1 = new GregorianCalendar();
+        calendar1.set(Calendar.YEAR, 2019);
+        calendar1.set(Calendar.MONTH, 6);
+        calendar1.set(Calendar.DAY_OF_MONTH, 18);
+        Date date1 = calendar1.getTime();
+        //  2019-06-24
+        Calendar calendar2 = new GregorianCalendar();
+        calendar2.set(Calendar.YEAR, 2019);
+        calendar2.set(Calendar.MONTH, 6);
+        calendar2.set(Calendar.DAY_OF_MONTH, 24);
+        Date date2 = calendar2.getTime();
+        // Difference
+        long diff = Math.abs(date2.getTime() - date1.getTime());
+        long numberOfDay = (long) diff / CONST_DURATION_OF_DAY;
+        System.err.println("Le nombre de jour est : " + numberOfDay);
+
+
+        return 6;
+    }
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,47 +145,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
         Log.d("HistoryMood", "Comment value:" + r.getComment());
         Log.d("HistoryMood", "date:" + r.getDate());
 
-        class RecoveryDate {
-            private void day() {
-                String day = "18-06-2019";
-                System.out.println(day + r.getDate());
-                String strDate = "2019-06-18";
-                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-                Date date = null;
-                try {
-                    date = dateFormat.parse(strDate);
-                } catch (ParseException e) {
-                    e.printStackTrace();
-
-                }
-
-                class CalculationDate {
-                    private long CONST_DURATION_OF_DAY = 1000l * 60 * 60 * 24;
-
-                    public CalculationDate() {
-
-                        Calendar calendar1 = new GregorianCalendar();
-                        calendar1.set(Calendar.YEAR, 2019);
-                        calendar1.set(Calendar.MONTH, 6);
-                        calendar1.set(Calendar.DAY_OF_MONTH, 18);
-                        Date date1 = calendar1.getTime();
-                        //  2019-06-24
-                        Calendar calendar2 = new GregorianCalendar();
-                        calendar2.set(Calendar.YEAR, 2019);
-                        calendar2.set(Calendar.MONTH, 6);
-                        calendar2.set(Calendar.DAY_OF_MONTH, 24);
-                        Date date2 = calendar2.getTime();
-                        // Difference
-                        long diff = Math.abs(date2.getTime() - date1.getTime());
-                        long numberOfDay = (long) diff / CONST_DURATION_OF_DAY;
-                        System.err.println("Le nombre de jour est : " + numberOfDay);
-
-                    }
-
-                    public void HistoryMoodActivity(String[] args) {
-                        new CalculationDate();
-                    }
-                }
                 mButtonDialogYesterday.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -282,19 +286,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
                         }
                     }
                 });
+
             }
         }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
