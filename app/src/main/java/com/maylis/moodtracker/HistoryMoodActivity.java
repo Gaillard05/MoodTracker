@@ -98,13 +98,17 @@ public class HistoryMoodActivity extends AppCompatActivity {
         return 6;
     }
 
-    private void calendarDay(){
+    private void calendarDay() {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.DAY_OF_MONTH, 24);
+        calendar.set(Calendar.DAY_OF_MONTH, 26);
         calendar.set(Calendar.MONTH, 6);
         calendar.set(Calendar.YEAR, 2019);
         calendar.getTime();
-    }
+
+       // new Calendar() {
+     //   }
+
+   }
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
