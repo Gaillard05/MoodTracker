@@ -6,6 +6,8 @@ package com.maylis.moodtracker;
 
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -14,11 +16,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+//import java.text.ParseException;
+//import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+
 
 
 public class HistoryMoodActivity extends AppCompatActivity {
@@ -41,7 +44,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
     private Button mButtonDialogBeforeYesterday;
     private Button mButtonDialogYesterday;
     private boolean isComment;
-    private Mood r;
+    private Mood mMood;
 
     private int colorIndex;
 
@@ -53,58 +56,68 @@ public class HistoryMoodActivity extends AppCompatActivity {
             R.color.banana_yellow,
             };
 
-    private String recoveryDate;
+   //final Mood r = Storage.load(this, "mood");
 
-    private String recoveryDate() {
-        String day = "24-06-2019";
-        System.out.println(day + r.getDate());
-        String strDate = "2019-06-24";
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        Date date = null;
-        try {
-            date = dateFormat.parse(strDate);
-        } catch (ParseException e) {
-            e.printStackTrace();
 
-        }
+    //private static void recoveryDate(Context context, Mood mood, r.getDate()){
+       // SharedPreferences mPreferences = context.getSharedPreferences(r.getDate(), MODE_PRIVATE);
+        //SharedPreferences.Editor prefsEditor = mPreferences.edit();
 
-        return day;
-    }
+   // }
 
-    private int calculationDate;
-    private long CONST_DURATION_OF_DAY;
 
-    private int calculationDate() {
 
-        long CONST_DURATION_OF_DAY = 1000 * 60 * 60 * 24;
 
-        Calendar calendar1 = new GregorianCalendar();
-        calendar1.set(Calendar.YEAR, 2019);
-        calendar1.set(Calendar.MONTH, 6);
-        calendar1.set(Calendar.DAY_OF_MONTH, 18);
-        Date date1 = calendar1.getTime();
+
+        //String day = "24-06-2019";
+        //System.out.println(day + r.getDate());
+        //String strDate = "2019-06-24";
+        //SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+       // Date date = null;
+        //try {
+         //   date = dateFormat.parse(strDate);
+        //} catch (ParseException e) {
+        //    e.printStackTrace();
+
+       // }
+
+        //return day;
+    //}
+
+   // private int calculationDate;
+   // private long CONST_DURATION_OF_DAY;
+
+
+   // private int calculationDate() {
+
+      //  long CONST_DURATION_OF_DAY = 1000 * 60 * 60 * 24;
+
+
+      //  Calendar calendar1 = new GregorianCalendar();
+       // calendar1.set(Calendar.YEAR, 2019);
+       // calendar1.set(Calendar.MONTH, 6);
+        //calendar1.set(Calendar.DAY_OF_MONTH, 18);
+        //Date date1 = calendar1.getTime();
         //  2019-06-24
-        Calendar calendar2 = new GregorianCalendar();
-        calendar2.set(Calendar.YEAR, 2019);
-        calendar2.set(Calendar.MONTH, 6);
-        calendar2.set(Calendar.DAY_OF_MONTH, 24);
-        Date date2 = calendar2.getTime();
+
         // Difference
-        long diff = Math.abs(date2.getTime() - date1.getTime());
-        long numberOfDay = (long) diff / CONST_DURATION_OF_DAY;
-        System.err.println("Le nombre de jour est : " + numberOfDay);
+       // long diff = Math.abs(date2.getTime() - date1.getTime());
+       // long numberOfDay = (long) diff / CONST_DURATION_OF_DAY;
+        //System.err.println("Le nombre de jour est : " + numberOfDay);
 
 
-        return 6;
-    }
+       // return 6;
+   //}
 
-    private void calendarDay() {
+    private void calendar(){
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.DAY_OF_MONTH, 26);
-        calendar.set(Calendar.MONTH, 6);
-        calendar.set(Calendar.YEAR, 2019);
-        calendar.getTime();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
 
+        //Calendar calTmp = Calendar.getInstance();
+        //Calendar calToday = new GregorianCalendar();
+        //calToday.set(Calendar.YEAR,calTmp.get(Calendar.YEAR));
        // new Calendar() {
      //   }
 
