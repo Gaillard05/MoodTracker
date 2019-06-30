@@ -73,7 +73,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
         //String day = "24-06-2019";
         //System.out.println(day + r.getDate());
-        //String strDate = "2019-06-24";
+        //String strDate = "2019-06-30";
         //SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
        // Date date = null;
         //try {
@@ -97,7 +97,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
    // private void new calendar1(){
 
        //
-        //  2019-06-24
+        //  2019-06-30
    // }
 
 
