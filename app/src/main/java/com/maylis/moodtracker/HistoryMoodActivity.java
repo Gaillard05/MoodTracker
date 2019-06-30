@@ -94,13 +94,16 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
       //  long CONST_DURATION_OF_DAY = 1000 * 60 * 60 * 24;
 
+   // private void calendar1(){
 
-      //  Calendar calendar1 = new GregorianCalendar();
-       // calendar1.set(Calendar.YEAR, 2019);
-       // calendar1.set(Calendar.MONTH, 6);
-        //calendar1.set(Calendar.DAY_OF_MONTH, 18);
-        //Date date1 = calendar1.getTime();
+       // Calendar calendar1 = new GregorianCalendar();
+       // Calendar calendar = Calendar.getInstance(Calendar.YEAR,Calendar.MONTH, Calendar.DAY_OF_MONTH);
+       // calendar.set(Calendar.YEAR);
+       // calendar.set(Calendar.MONTH);
+       // calendar.set(Calendar.DAY_OF_MONTH);
         //  2019-06-24
+   // }
+
 
         // Difference
        // long diff = Math.abs(date2.getTime() - date1.getTime());
@@ -110,7 +113,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
        // return 6;
    //}
-
     private void calendar(){
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
@@ -122,7 +124,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
         //calToday.set(Calendar.YEAR,calTmp.get(Calendar.YEAR));
        // new Calendar() {
      //   }
-
    }
 
     @Override
