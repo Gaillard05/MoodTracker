@@ -94,13 +94,9 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
       //  long CONST_DURATION_OF_DAY = 1000 * 60 * 60 * 24;
 
-   // private void calendar1(){
+   // private void new calendar1(){
 
-       // Calendar calendar1 = new GregorianCalendar();
-       // Calendar calendar = Calendar.getInstance(Calendar.YEAR,Calendar.MONTH, Calendar.DAY_OF_MONTH);
-       // calendar.set(Calendar.YEAR);
-       // calendar.set(Calendar.MONTH);
-       // calendar.set(Calendar.DAY_OF_MONTH);
+       //
         //  2019-06-24
    // }
 
@@ -113,18 +109,22 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
        // return 6;
    //}
-    private void calendar(){
-        Calendar calendar = Calendar.getInstance();
-        int year = calendar.get(Calendar.YEAR);
-        int month = calendar.get(Calendar.MONTH);
-        int day = calendar.get(Calendar.DAY_OF_MONTH);
+   // private void calendar(){
+       // Calendar calendar = Calendar.getInstance();
+       // int year = calendar.get(Calendar.YEAR);
+       // int month = calendar.get(Calendar.MONTH);
+       // int day = calendar.get(Calendar.DAY_OF_MONTH);
 
         //Calendar calTmp = Calendar.getInstance();
-        //Calendar calToday = new GregorianCalendar();
-        //calToday.set(Calendar.YEAR,calTmp.get(Calendar.YEAR));
-       // new Calendar() {
+       // Calendar calToday = new GregorianCalendar();
+       // calToday.set(Calendar.YEAR,calTmp.get(Calendar.YEAR));
+      // new Calendar() {
+        //Calendar getCalendar = new GregorianCalendar();
+        //Calendar getCalendar.set(Calendar.YEAR);
+      // Calendar getCalendar.set(Calendar.MONTH);
+     //  Calendar getCalendar.set(Calendar.DAY_OF_MONTH);
      //   }
-   }
+   //}
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
