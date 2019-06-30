@@ -56,14 +56,18 @@ public class HistoryMoodActivity extends AppCompatActivity {
             R.color.banana_yellow,
             };
 
-   //final Mood r = Storage.load(this, "mood");
+   // private class Mood {
 
+    //}
+   // private static  Mood r = Storage.load;
 
-    //private static String recoveryDate(Context context, Mood mood, r.getDate()){
-       //SharedPreferences mPreferences = context.getSharedPreferences(r.getDate(), MODE_PRIVATE);
-       //SharedPreferences.Editor prefsEditor = mPreferences.edit();
+  //  private static void recoveryDate(Context context, Mood mood, r.getDate()){
+    //    SharedPreferences mPreferences = context.getSharedPreferences(r.getDate(), MODE_PRIVATE);
+     //   SharedPreferences.Editor prefsEditor = mPreferences.edit();
 
-   // }
+       // {
+
+      //  }
 
 
 
