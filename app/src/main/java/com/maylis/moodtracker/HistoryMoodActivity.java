@@ -44,7 +44,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
     private Button mButtonDialogBeforeYesterday;
     private Button mButtonDialogYesterday;
     private boolean isComment;
-    private Mood mMood;
+    private Mood r;
 
     private int colorIndex;
 
@@ -59,9 +59,9 @@ public class HistoryMoodActivity extends AppCompatActivity {
    //final Mood r = Storage.load(this, "mood");
 
 
-    //private static void recoveryDate(Context context, Mood mood, r.getDate()){
-       // SharedPreferences mPreferences = context.getSharedPreferences(r.getDate(), MODE_PRIVATE);
-        //SharedPreferences.Editor prefsEditor = mPreferences.edit();
+    //private static String recoveryDate(Context context, Mood mood, r.getDate()){
+       //SharedPreferences mPreferences = context.getSharedPreferences(r.getDate(), MODE_PRIVATE);
+       //SharedPreferences.Editor prefsEditor = mPreferences.edit();
 
    // }
 
