@@ -6,8 +6,8 @@ package com.maylis.moodtracker;
 
 
 
-import android.content.Context;
-import android.content.SharedPreferences;
+//import android.content.Context;
+//import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -18,10 +18,6 @@ import android.widget.Toast;
 
 //import java.text.ParseException;
 //import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-
 
 
 public class HistoryMoodActivity extends AppCompatActivity {
@@ -55,7 +51,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
             R.color.light_sage,
             R.color.banana_yellow,
             };
-
 
    //private Mood r = r.getDate();
 
@@ -97,7 +92,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
    // private void new calendar1(){
 
        //
-        //  2019-06-30
+        //  2019-7-2
    // }
 
 
