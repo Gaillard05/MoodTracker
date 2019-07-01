@@ -55,6 +55,20 @@ public class HistoryMoodActivity extends AppCompatActivity {
             R.color.banana_yellow,
             };
 
+   // String day = "01-07-2019";
+  //  System.out.println(day + r.getDate());
+          //  String strDate = "";
+          //  SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+          //  Date date = null;
+           // try {
+          //  date = dateFormat.parse(strDate);
+          //  } catch (ParseException e) {
+           // e.printStackTrace();
+
+           // }
+
+         //   return day;
+         //   }
 
     private static void recoveryDate(Context context, Mood mood, Mood r) {
         SharedPreferences mPreferences = context.getSharedPreferences(r.getDate(), MODE_PRIVATE);
@@ -69,22 +83,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
      calToday.set(Calendar.MONTH, calTmp.get(Calendar.MONTH));
      calToday.set(Calendar.DAY_OF_MONTH, calTmp.get(Calendar.DAY_OF_MONTH));
     }
-
-
-        //String day = "01-07-2019";
-        //System.out.println(day + r.getDate());
-        //String strDate = "";
-        //SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        // Date date = null;
-        //try {
-        //   date = dateFormat.parse(strDate);
-        //} catch (ParseException e) {
-        //    e.printStackTrace();
-
-        // }
-
-        //return day;
-        //}
 
         // private int calculationDate;
         // private long CONST_DURATION_OF_DAY;
