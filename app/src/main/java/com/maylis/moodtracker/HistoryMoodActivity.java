@@ -6,8 +6,8 @@ package com.maylis.moodtracker;
 
 
 
-//import android.content.Context;
-//import android.content.SharedPreferences;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -52,74 +52,70 @@ public class HistoryMoodActivity extends AppCompatActivity {
             R.color.banana_yellow,
             };
 
-   //private Mood r = r.getDate();
 
- //private static String recoveryDate(Context context, Mood mood, String getDate()){
-   //SharedPreferences mPreferences = getSharedPreferences(r.getDate(), MODE_PRIVATE);
-   //mPreferences.edit().putString("date:", r.getDate()).apply();
+    //private static String recoveryDate(Context context, Mood mood, r.getDate) {
+       // SharedPreferences mPreferences = getSharedPreferences(r.getDate(), MODE_PRIVATE);
+       // mPreferences.edit().putString("date:", r.getDate()).apply();
 
-      // {
+      //  {
 
       // }
 
 
-
-
-
-        //String day = "24-06-2019";
+        //String day = "01-07-2019";
         //System.out.println(day + r.getDate());
-        //String strDate = "2019-06-30";
+        //String strDate = "";
         //SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-       // Date date = null;
+        // Date date = null;
         //try {
-         //   date = dateFormat.parse(strDate);
+        //   date = dateFormat.parse(strDate);
         //} catch (ParseException e) {
         //    e.printStackTrace();
 
-       // }
+        // }
 
         //return day;
-    //}
+        //}
 
-   // private int calculationDate;
-   // private long CONST_DURATION_OF_DAY;
+        // private int calculationDate;
+        // private long CONST_DURATION_OF_DAY;
 
 
-   // private int calculationDate() {
+        // private int calculationDate() {
 
-      //  long CONST_DURATION_OF_DAY = 1000 * 60 * 60 * 24;
+        //  long CONST_DURATION_OF_DAY = 1000 * 60 * 60 * 24;
 
-   // private void new calendar1(){
+        // private void new calendar1(){
 
-       //
+        //
         //  2019-7-2
-   // }
+        // }
 
 
         // Difference
-       // long diff = Math.abs(date2.getTime() - date1.getTime());
-       // long numberOfDay = (long) diff / CONST_DURATION_OF_DAY;
+        // long diff = Math.abs(date2.getTime() - date1.getTime());
+        // long numberOfDay = (long) diff / CONST_DURATION_OF_DAY;
         //System.err.println("Le nombre de jour est : " + numberOfDay);
 
 
-       // return 6;
-   //}
-   // private void calendar(){
-       // Calendar calendar = Calendar.getInstance();
-       // int year = calendar.get(Calendar.YEAR);
-       // int month = calendar.get(Calendar.MONTH);
-       // int day = calendar.get(Calendar.DAY_OF_MONTH);
+        // return 6;
+        //}
+        // private void calendar(){
+        // Calendar calendar = Calendar.getInstance();
+        // int year = calendar.get(Calendar.YEAR);
+        // int month = calendar.get(Calendar.MONTH);
+        // int day = calendar.get(Calendar.DAY_OF_MONTH);
 
         //Calendar calTmp = Calendar.getInstance();
-       // Calendar calToday = new GregorianCalendar();
-       // calToday.set(Calendar.YEAR,calTmp.get(Calendar.YEAR));
-      // new Calendar() {
+        // Calendar calToday = new GregorianCalendar();
+        // calToday.set(Calendar.YEAR,calTmp.get(Calendar.YEAR));
+        // new Calendar() {
         //Calendar getCalendar = new GregorianCalendar();
         //Calendar getCalendar.set(Calendar.YEAR);
-      // Calendar getCalendar.set(Calendar.MONTH);
-     //  Calendar getCalendar.set(Calendar.DAY_OF_MONTH);
-     //   }
-   //}
+        // Calendar getCalendar.set(Calendar.MONTH);
+        //  Calendar getCalendar.set(Calendar.DAY_OF_MONTH);
+        // }
+   // }
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -159,10 +155,9 @@ public class HistoryMoodActivity extends AppCompatActivity {
         mButtonDialogYesterday = (Button) findViewById(R.id.activity_history_mood_yesterday_dialog_btn);
         mYesterdays.setBackgroundResource(colorDrawableResID[colorIndex]);
 
-
         isComment = true;
 
-        final Mood r = Storage.load(this, "mood");
+       r = Storage.load(this, "mood");
         Log.d("HistoryMood", "Mood value:" + r.getMoodIndex());
         Log.d("HistoryMood", "Comment value:" + r.getComment());
         Log.d("HistoryMood", "date:" + r.getDate());
