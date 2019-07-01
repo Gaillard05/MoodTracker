@@ -53,11 +53,10 @@ public class HistoryMoodActivity extends AppCompatActivity {
             };
 
 
-    private String recoveryDate(Context context, Mood mood, Mood r) {
-        SharedPreferences mPreferences = getSharedPreferences(r.getDate(), MODE_PRIVATE);
+    private static void recoveryDate(Context context, Mood mood, Mood r) {
+        SharedPreferences mPreferences = context.getSharedPreferences(r.getDate(), MODE_PRIVATE);
         mPreferences.edit().putString("date:", r.getDate()).apply();
 
-        return null;
     }
 
 
