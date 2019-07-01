@@ -128,7 +128,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
         colorIndex = 4;
 
-
         isComment = false;
 
         mWeek = (TextView) findViewById(R.id.activity_history_mood_week_txt);
