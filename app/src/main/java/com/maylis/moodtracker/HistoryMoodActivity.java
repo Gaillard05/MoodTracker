@@ -16,6 +16,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 //import java.text.ParseException;
 //import java.text.SimpleDateFormat;
 
@@ -59,6 +62,13 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
     }
 
+    private void calendar(){
+     Calendar calTmp = Calendar.getInstance();
+     Calendar calToday = new GregorianCalendar();
+     calToday.set(Calendar.YEAR,calTmp.get(Calendar.YEAR));
+     calToday.set(Calendar.MONTH, calTmp.get(Calendar.MONTH));
+     calToday.set(Calendar.DAY_OF_MONTH, calTmp.get(Calendar.DAY_OF_MONTH));
+    }
 
 
         //String day = "01-07-2019";
@@ -99,22 +109,8 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
         // return 6;
         //}
-        // private void calendar(){
-        // Calendar calendar = Calendar.getInstance();
-        // int year = calendar.get(Calendar.YEAR);
-        // int month = calendar.get(Calendar.MONTH);
-        // int day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        //Calendar calTmp = Calendar.getInstance();
-        // Calendar calToday = new GregorianCalendar();
-        // calToday.set(Calendar.YEAR,calTmp.get(Calendar.YEAR));
-        // new Calendar() {
-        //Calendar getCalendar = new GregorianCalendar();
-        //Calendar getCalendar.set(Calendar.YEAR);
-        // Calendar getCalendar.set(Calendar.MONTH);
-        //  Calendar getCalendar.set(Calendar.DAY_OF_MONTH);
-          //  }
-        //}
+
 
         @Override
         protected void onCreate ( final Bundle savedInstanceState){
