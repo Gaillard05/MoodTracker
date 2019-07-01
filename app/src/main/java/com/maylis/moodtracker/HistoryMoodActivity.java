@@ -57,15 +57,15 @@ public class HistoryMoodActivity extends AppCompatActivity {
             };
 
 
-   //private final Mood r = r.getDate();
+   //private Mood r = r.getDate();
 
- // private static String recoveryDate(Context context, Mood mood, r.getDate()){
-    //SharedPreferences mPreferences = context.getSharedPreferences(r.getDate(), MODE_PRIVATE);
-    //SharedPreferences.Editor prefsEditor = mPreferences.edit();
+ //private static String recoveryDate(Context context, Mood mood, String getDate()){
+   //SharedPreferences mPreferences = getSharedPreferences(r.getDate(), MODE_PRIVATE);
+   //mPreferences.edit().putString("date:", r.getDate()).apply();
 
-       // {
+      // {
 
-      //  }
+      // }
 
 
 
