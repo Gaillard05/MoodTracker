@@ -103,11 +103,15 @@ public class HistoryMoodActivity extends AppCompatActivity {
    // }
 
         @Override
-        protected void onCreate ( final Bundle savedInstanceState){
+        protected void onCreate ( final Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_history_mood);
+            r = Storage.load(this, "mood");
+            Log.d("HistoryMood", "Mood value:" + r.getMoodIndex());
+            Log.d("HistoryMood", "Comment value:" + r.getComment());
+            Log.d("HistoryMood", "date:" + r.getDate());
 
-            colorIndex = 4;
+            colorIndex = 3;
 
             isComment = false;
 
@@ -138,14 +142,14 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
             mYesterdays = (TextView) findViewById(R.id.activity_history_mood_yesterday_txt);
             mButtonDialogYesterday = (Button) findViewById(R.id.activity_history_mood_yesterday_dialog_btn);
-            mYesterdays.setBackgroundResource(colorDrawableResID[colorIndex]);
+
+
+            colorIndex = Math.min(colorIndex + 1, colorDrawableResID.length - 1);
+            displayColor();
+
 
             isComment = true;
 
-            r = Storage.load(this, "mood");
-            Log.d("HistoryMood", "Mood value:" + r.getMoodIndex());
-            Log.d("HistoryMood", "Comment value:" + r.getComment());
-            Log.d("HistoryMood", "date:" + r.getDate());
 
             mButtonDialogYesterday.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -270,8 +274,13 @@ public class HistoryMoodActivity extends AppCompatActivity {
                         mButtonDialogWeek.setVisibility(View.INVISIBLE);
 
                     }
+
                 }
             });
-
         }
+
+    private void displayColor() {
+        mYesterdays.setBackgroundResource(colorDrawableResID[colorIndex]);
+        }
+
     }
