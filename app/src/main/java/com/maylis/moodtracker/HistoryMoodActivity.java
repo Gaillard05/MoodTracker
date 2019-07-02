@@ -62,15 +62,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
         mPreferences.edit().putString("date:", r.getDate()).apply();
 
     }
-
-    private void calendar() {
-        Calendar calTmp = Calendar.getInstance();
-        Calendar calToday = new GregorianCalendar();
-        calToday.set(Calendar.YEAR, calTmp.get(Calendar.YEAR));
-        calToday.set(Calendar.MONTH, calTmp.get(Calendar.MONTH));
-        calToday.set(Calendar.DAY_OF_MONTH, calTmp.get(Calendar.DAY_OF_MONTH));
-    }
-
     private int calculationDate;
     private long CONST_DURATION_OF_DAY;
 
