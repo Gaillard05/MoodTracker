@@ -1,10 +1,11 @@
 package com.maylis.moodtracker;
 
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-
+import java.util.GregorianCalendar;
 
 
 /**
@@ -33,4 +34,28 @@ public class ManageDateMood {
     public Date getDate() {
         return mDate;
     }
- }
+
+    private static String day(Mood r) {
+        String day = "01-07-2019";
+        System.out.println(day + r.getDate());
+        String strDate = "";
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = null;
+        try {
+            date = dateFormat.parse(strDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+
+        }
+
+        return day;
+    }
+
+    private void calendar() {
+        Calendar calTmp = Calendar.getInstance();
+        Calendar calToday = new GregorianCalendar();
+        calToday.set(Calendar.YEAR, calTmp.get(Calendar.YEAR));
+        calToday.set(Calendar.MONTH, calTmp.get(Calendar.MONTH));
+        calToday.set(Calendar.DAY_OF_MONTH, calTmp.get(Calendar.DAY_OF_MONTH));
+    }
+}

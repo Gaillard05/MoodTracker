@@ -54,21 +54,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
             R.color.banana_yellow,
             };
 
-    private static String day(Mood r) {
-        String day = "01-07-2019";
-        System.out.println(day + r.getDate());
-        String strDate = "";
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        Date date = null;
-        try {
-            date = dateFormat.parse(strDate);
-        } catch (ParseException e) {
-            e.printStackTrace();
 
-        }
-
-        return day;
-    }
 
 
     private static void recoveryDate(Context context, Mood mood, Mood r) {
