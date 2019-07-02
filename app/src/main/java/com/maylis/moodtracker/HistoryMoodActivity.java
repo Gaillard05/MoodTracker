@@ -98,6 +98,7 @@ public class HistoryMoodActivity extends AppCompatActivity {
     //    System.err.println("Le nombre de jour est : " + numberOfDay);
     // }
 
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -142,6 +143,11 @@ public class HistoryMoodActivity extends AppCompatActivity {
             mButtonDialogYesterday.setVisibility(View.INVISIBLE);
         } else {
             mButtonDialogYesterday.setVisibility(View.VISIBLE);
+
+            mYesterdays = (TextView) findViewById(R.id.activity_history_mood_yesterday_txt);
+            mButtonDialogYesterday = (Button) findViewById(R.id.activity_history_mood_yesterday_dialog_btn);
+            mYesterdays.setBackgroundResource(colorDrawableResID[r.getMoodIndex()]);
+
 
 
             mButtonDialogYesterday.setOnClickListener(new View.OnClickListener() {
@@ -202,7 +208,8 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
                 }
             });
-        }
 
+        }
     }
+
 }
