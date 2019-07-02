@@ -16,7 +16,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 
 //import java.text.ParseException;
@@ -55,20 +58,22 @@ public class HistoryMoodActivity extends AppCompatActivity {
             R.color.banana_yellow,
             };
 
-   // String day = "01-07-2019";
-  //  System.out.println(day + r.getDate());
-          //  String strDate = "";
-          //  SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-          //  Date date = null;
-           // try {
-          //  date = dateFormat.parse(strDate);
-          //  } catch (ParseException e) {
-           // e.printStackTrace();
+    private static String day(Mood r) {
+        String day = "01-07-2019";
+        System.out.println(day + r.getDate());
+        String strDate = "";
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = null;
+        try {
+            date = dateFormat.parse(strDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
 
-           // }
+        }
 
-         //   return day;
-         //   }
+        return day;
+    }
+
 
     private static void recoveryDate(Context context, Mood mood, Mood r) {
         SharedPreferences mPreferences = context.getSharedPreferences(r.getDate(), MODE_PRIVATE);
@@ -76,39 +81,26 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
     }
 
-    private void calendar(){
-     Calendar calTmp = Calendar.getInstance();
-     Calendar calToday = new GregorianCalendar();
-     calToday.set(Calendar.YEAR,calTmp.get(Calendar.YEAR));
-     calToday.set(Calendar.MONTH, calTmp.get(Calendar.MONTH));
-     calToday.set(Calendar.DAY_OF_MONTH, calTmp.get(Calendar.DAY_OF_MONTH));
+    private void calendar() {
+        Calendar calTmp = Calendar.getInstance();
+        Calendar calToday = new GregorianCalendar();
+        calToday.set(Calendar.YEAR, calTmp.get(Calendar.YEAR));
+        calToday.set(Calendar.MONTH, calTmp.get(Calendar.MONTH));
+        calToday.set(Calendar.DAY_OF_MONTH, calTmp.get(Calendar.DAY_OF_MONTH));
     }
 
-        // private int calculationDate;
-        // private long CONST_DURATION_OF_DAY;
+    private int calculationDate;
+    private long CONST_DURATION_OF_DAY;
 
 
-        // private int calculationDate() {
+   // private int calculationDate() {
 
-        //  long CONST_DURATION_OF_DAY = 1000 * 60 * 60 * 24;
-
-        // private void new calendar1(){
-
-        //
-        //  2019-7-2
-        // }
-
-
-        // Difference
-        // long diff = Math.abs(date2.getTime() - date1.getTime());
-        // long numberOfDay = (long) diff / CONST_DURATION_OF_DAY;
-        //System.err.println("Le nombre de jour est : " + numberOfDay);
-
-
-        // return 6;
-        //}
-
-
+   //     long CONST_DURATION_OF_DAY = 1000 * 60 * 60 * 24;
+// Difference
+    //    long diff = Math.abs(.getTime() - .getTime());
+    //    long numberOfDay = (long) diff / CONST_DURATION_OF_DAY;
+    //    System.err.println("Le nombre de jour est : " + numberOfDay);
+   // }
 
         @Override
         protected void onCreate ( final Bundle savedInstanceState){
