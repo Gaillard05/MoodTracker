@@ -55,18 +55,15 @@ public class HistoryMoodActivity extends AppCompatActivity {
         mPreferences.edit().putString("date:", r.getDate()).apply();
 
     }
-    private int calculationDate;
-    private long CONST_DURATION_OF_DAY;
 
+   // private long calculationDate() {
 
-    // private int calculationDate() {
-
-    //     long CONST_DURATION_OF_DAY = 1000 * 60 * 60 * 24;
-// Difference
-    //    long diff = Math.abs(.getTime() - .getTime());
-    //    long numberOfDay = (long) diff / CONST_DURATION_OF_DAY;
-    //    System.err.println("Le nombre de jour est : " + numberOfDay);
-    // }
+   //  long CONST_DURATION_OF_DAY = 1000 * 60 * 60 * 24;
+//Difference
+  //  long diff = Math.abs(.getTime() - .getTime());
+  //  long numberOfDay = (long) diff / CONST_DURATION_OF_DAY;
+ //   System.err.println("Le nombre de jour est : " + numberOfDay);
+//     }
 
 
     @Override

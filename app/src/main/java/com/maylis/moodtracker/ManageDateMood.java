@@ -35,7 +35,7 @@ public class ManageDateMood {
         return mDate;
     }
 
-    private static Date day(Mood r) {
+    public static Date day(Mood r) {
         String day = "01-07-2019";
         System.out.println(day + r.getDate());
         String strDate = "";
@@ -51,7 +51,7 @@ public class ManageDateMood {
         return date;
     }
 
-    private static Calendar calendar() {
+    public static Calendar calendar() {
         Calendar calTmp = Calendar.getInstance();
         Calendar calToday = new GregorianCalendar();
         calToday.set(Calendar.YEAR, calTmp.get(Calendar.YEAR));
