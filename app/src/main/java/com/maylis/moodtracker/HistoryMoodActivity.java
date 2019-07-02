@@ -22,8 +22,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-//import java.text.ParseException;
-//import java.text.SimpleDateFormat;
 
 
 public class HistoryMoodActivity extends AppCompatActivity {
@@ -45,7 +43,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
     private Button mButtonDialogThreeDays;
     private Button mButtonDialogBeforeYesterday;
     private Button mButtonDialogYesterday;
-    private boolean isComment;
     private Mood r;
 
 
@@ -92,61 +89,58 @@ public class HistoryMoodActivity extends AppCompatActivity {
     private long CONST_DURATION_OF_DAY;
 
 
-   // private int calculationDate() {
+    // private int calculationDate() {
 
-   //     long CONST_DURATION_OF_DAY = 1000 * 60 * 60 * 24;
+    //     long CONST_DURATION_OF_DAY = 1000 * 60 * 60 * 24;
 // Difference
     //    long diff = Math.abs(.getTime() - .getTime());
     //    long numberOfDay = (long) diff / CONST_DURATION_OF_DAY;
     //    System.err.println("Le nombre de jour est : " + numberOfDay);
-   // }
+    // }
 
-        @Override
-        protected void onCreate ( final Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_history_mood);
-            r = Storage.load(this, "mood");
-            Log.d("HistoryMood", "Mood value:" + r.getMoodIndex());
-            Log.d("HistoryMood", "Comment value:" + r.getComment());
-            Log.d("HistoryMood", "date:" + r.getDate());
+    @Override
+    protected void onCreate(final Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_history_mood);
 
-
-
+        r = Storage.load(this, "mood");
+        Log.d("HistoryMood", "Mood value:" + r.getMoodIndex());
+        Log.d("HistoryMood", "Comment value:" + r.getComment());
+        Log.d("HistoryMood", "date:" + r.getDate());
 
 
-            mWeek = (TextView) findViewById(R.id.activity_history_mood_week_txt);
-            mButtonDialogWeek = (Button) findViewById(R.id.activity_history_mood_week_dialog_btn);
-            mButtonDialogWeek.setVisibility(View.INVISIBLE);
+        mWeek = (TextView) findViewById(R.id.activity_history_mood_week_txt);
+        mButtonDialogWeek = (Button) findViewById(R.id.activity_history_mood_week_dialog_btn);
+        mButtonDialogWeek.setVisibility(View.INVISIBLE);
 
-            mSixDays = (TextView) findViewById(R.id.activity_history_mood_6days_txt);
-            mButtonDialogSixDays = (Button) findViewById(R.id.activity_history_mood_6days_dialog_btn);
-            mButtonDialogSixDays.setVisibility(View.INVISIBLE);
+        mSixDays = (TextView) findViewById(R.id.activity_history_mood_6days_txt);
+        mButtonDialogSixDays = (Button) findViewById(R.id.activity_history_mood_6days_dialog_btn);
+        mButtonDialogSixDays.setVisibility(View.INVISIBLE);
 
-            mFiveDays = (TextView) findViewById(R.id.activity_history_mood_5days_txt);
-            mButtonDialogFiveDays = (Button) findViewById(R.id.activity_history_mood_5days_dialog_btn);
-            mButtonDialogFiveDays.setVisibility(View.INVISIBLE);
+        mFiveDays = (TextView) findViewById(R.id.activity_history_mood_5days_txt);
+        mButtonDialogFiveDays = (Button) findViewById(R.id.activity_history_mood_5days_dialog_btn);
+        mButtonDialogFiveDays.setVisibility(View.INVISIBLE);
 
-            mFourDays = (TextView) findViewById(R.id.activity_history_mood_4days_txt);
-            mButtonDialogFourDays = (Button) findViewById(R.id.activity_history_mood_4days_dialog_btn);
-            mButtonDialogFourDays.setVisibility(View.INVISIBLE);
+        mFourDays = (TextView) findViewById(R.id.activity_history_mood_4days_txt);
+        mButtonDialogFourDays = (Button) findViewById(R.id.activity_history_mood_4days_dialog_btn);
+        mButtonDialogFourDays.setVisibility(View.INVISIBLE);
 
-            mThreeDays = (TextView) findViewById(R.id.activity_history_mood_3days_txt);
-            mButtonDialogThreeDays = (Button) findViewById(R.id.activity_history_mood_3days_dialog_btn);
-            mButtonDialogThreeDays.setVisibility(View.INVISIBLE);
+        mThreeDays = (TextView) findViewById(R.id.activity_history_mood_3days_txt);
+        mButtonDialogThreeDays = (Button) findViewById(R.id.activity_history_mood_3days_dialog_btn);
+        mButtonDialogThreeDays.setVisibility(View.INVISIBLE);
 
-            mBeforeYesterdays = (TextView) findViewById(R.id.activity_history_mood_before_yesterday_txt);
-            mButtonDialogBeforeYesterday = (Button) findViewById(R.id.activity_history_mood_before_yesterday_dialog_btn);
-            mButtonDialogBeforeYesterday.setVisibility(View.INVISIBLE);
-
-
-            mYesterdays = (TextView) findViewById(R.id.activity_history_mood_yesterday_txt);
-            mButtonDialogYesterday = (Button) findViewById(R.id.activity_history_mood_yesterday_dialog_btn);
-            mYesterdays.setBackgroundResource(colorDrawableResID[r.getMoodIndex()]);
+        mBeforeYesterdays = (TextView) findViewById(R.id.activity_history_mood_before_yesterday_txt);
+        mButtonDialogBeforeYesterday = (Button) findViewById(R.id.activity_history_mood_before_yesterday_dialog_btn);
+        mButtonDialogBeforeYesterday.setVisibility(View.INVISIBLE);
 
 
-
-
-
+        mYesterdays = (TextView) findViewById(R.id.activity_history_mood_yesterday_txt);
+        mButtonDialogYesterday = (Button) findViewById(R.id.activity_history_mood_yesterday_dialog_btn);
+        mYesterdays.setBackgroundResource(colorDrawableResID[r.getMoodIndex()]);
+        if (r.getComment().isEmpty()) {
+            mButtonDialogYesterday.setVisibility(View.INVISIBLE);
+        } else {
+            mButtonDialogYesterday.setVisibility(View.VISIBLE);
 
 
             mButtonDialogYesterday.setOnClickListener(new View.OnClickListener() {
@@ -157,6 +151,8 @@ public class HistoryMoodActivity extends AppCompatActivity {
                     System.out.println("" + r.getComment());
 
                     Toast.makeText(HistoryMoodActivity.this, comment + r.getComment(), Toast.LENGTH_SHORT).show();
+
+
                 }
             });
 
@@ -165,19 +161,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
                 public void onClick(View v) {
 
 
-                    if (isComment) {
-
-                        Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
-                        isComment = false;
-
-                    } else {
-
-                        Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
-                        isComment = true;
-
-
-                    }
-
                 }
             });
 
@@ -185,17 +168,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    if (isComment) {
-                        Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
-                        isComment = true;
-
-                    } else {
-                        Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
-                        isComment = false;
-
-
-
-                    }
                 }
             });
 
@@ -203,17 +175,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    if (isComment) {
-                        Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
-                        isComment = true;
-
-
-                    } else {
-                        Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
-                        isComment = false;
-
-
-                    }
                 }
             });
 
@@ -221,17 +182,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    if (isComment) {
-                        Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
-                        isComment = true;
-
-
-                    } else {
-                        Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
-                        isComment = false;
-
-
-                    }
 
                 }
             });
@@ -240,18 +190,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    if (isComment) {
-                        Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
-                        isComment = true;
-
-
-
-                    } else {
-                        Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
-                        isComment = false;
-
-
-                    }
 
                 }
             });
@@ -259,20 +197,11 @@ public class HistoryMoodActivity extends AppCompatActivity {
             mButtonDialogWeek.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (isComment) {
-                        Toast.makeText(HistoryMoodActivity.this, "" + r.getComment(), Toast.LENGTH_SHORT).show();
-                        isComment = true;
 
-
-                    } else {
-                        Toast.makeText(HistoryMoodActivity.this, "", Toast.LENGTH_SHORT).show();
-                        isComment = false;
-
-
-                    }
 
                 }
             });
         }
 
     }
+}
