@@ -16,11 +16,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 
 
 
@@ -53,8 +48,6 @@ public class HistoryMoodActivity extends AppCompatActivity {
             R.color.light_sage,
             R.color.banana_yellow,
             };
-
-
 
 
     private static void recoveryDate(Context context, Mood mood, Mood r) {
