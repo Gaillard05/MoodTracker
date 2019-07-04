@@ -56,15 +56,15 @@ public class HistoryMoodActivity extends AppCompatActivity {
 
     }
 
-    //private long calculationDate() {
+    private long calculationDate() {
 
-      //  long CONST_DURATION_OF_DAY = 1000 * 60 * 60 * 24;
+      long CONST_DURATION_OF_DAY = 1000 * 60 * 60 * 24;
 //Difference
-       // long diff = Math.abs(ManageDateMood.day(Mood r).getTime() - ManageDateMood.calendar().getTime());
-       // long numberOfDay = (long) diff / CONST_DURATION_OF_DAY;
-       // System.err.println("Le nombre de jour est : " + numberOfDay);
-       // return CONST_DURATION_OF_DAY;
-   // }
+        long diff = Math.abs(ManageDateMood.day(r).getTime() - CONST_DURATION_OF_DAY);
+        long numberOfDay = (long) diff / CONST_DURATION_OF_DAY;
+        System.err.println("Le nombre de jour est : " + numberOfDay);
+        return CONST_DURATION_OF_DAY;
+    }
 
 
     @Override
