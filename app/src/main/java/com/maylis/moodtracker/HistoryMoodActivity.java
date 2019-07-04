@@ -103,7 +103,9 @@ public class HistoryMoodActivity extends AppCompatActivity {
         mButtonDialogBeforeYesterday.setVisibility(View.INVISIBLE);
 
 
-        mYesterdays = (TextView) findViewById(R.id.activity_history_mood_yesterday_txt);
+        mYesterdays= (TextView) findViewById(R.id.activity_history_mood_yesterday_txt);
+        mYesterdays.setText("Il y a 3 jours");
+
         mButtonDialogYesterday = (Button) findViewById(R.id.activity_history_mood_yesterday_dialog_btn);
         mYesterdays.setBackgroundResource(colorDrawableResID[r.getMoodIndex()]);
 
